@@ -7,7 +7,12 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 gem 'heroku'
-
+gem 'devise'
+gem 'minitest'
+gem 'cancan'
+gem 'rolify'
+gem 'activeadmin'
+gem 'meta_search', ">=1.1.0.pre"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,20 +28,23 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+group :test, :development do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails', ">=3.1.0"
+	gem 'capybara'
+	gem 'guard-rspec'
+	gem 'launchy'
+	gem 'turn'
+end
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :test do
+	gem 'sqlite3'
+	gem 'email_rspec'
+	gem 'cucumber-rails'
+	gem 'database_cleaner'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 group :production do
+	gem 'pg'
 	gem 'thin'
 end
