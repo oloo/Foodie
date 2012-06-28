@@ -5,5 +5,5 @@ The Foodie App for online and mobile ordering and delivery. First in Kampala, th
 
 == Lets Get Started
 
-
+Currently the Models are empty
 
