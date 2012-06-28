@@ -13,6 +13,7 @@ gem 'cancan'
 gem 'rolify'
 gem 'activeadmin'
 gem 'meta_search', ">=1.1.0.pre"
+gem 'skeleton-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,8 +40,8 @@ end
 
 group :test do
 	gem 'sqlite3'
-	gem 'email_rspec'
-	gem 'cucumber-rails'
+	gem 'email_spec'
+	gem 'cucumber-rails', :require => false
 	gem 'database_cleaner'
 end
 
