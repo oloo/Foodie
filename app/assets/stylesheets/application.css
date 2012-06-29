@@ -4258,7 +4258,7 @@ footer {
     height: 324px;
     padding: 95px 620px 0 0;
     margin-right: -80px;
-    background: url("assets/foodie1.jpg") right bottom no-repeat; }
+    background: url('foodie1.jpg') right bottom no-repeat; }
     .home .hero-unit h1 {
       font-size: 38px;
       margin-top: 0.2em;
