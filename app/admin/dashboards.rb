@@ -1,5 +1,17 @@
 ActiveAdmin::Dashboards.build do
 
+  ActiveAdmin.register User do
+    form do |f|
+      f.inputs "User Details" do
+        f.input :name
+        f.input :email
+        f.input :password
+        f.input :password_confirmation
+      end
+      f.buttons
+    end
+  end
+
   # Define your dashboard sections here. Each block will be
   # rendered on the dashboard in the context of the view. So just
   # return the content which you would like to display.
@@ -40,5 +52,13 @@ ActiveAdmin::Dashboards.build do
   #
   # section "Membership Summary", :if => :memberships_enabled?
   # section "Membership Summary", :if => Proc.new { current_admin_user.account.memberships.any? }
-
+  # form do |f|
+  #   f.inputs "User Details" do
+  #     f.input :name
+  #     f.input :email
+  #     f.input :password
+  #     f.input :password_confirmation
+  #   end
+  #   f.buttons
+  # end
 end

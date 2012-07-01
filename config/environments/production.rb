@@ -20,7 +20,7 @@ Foodie::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.action_mailer.default_url_options = {:host => 'example.com'}
+  config.action_mailer.default_url_options = {:host => 'easyfoodie.herokuapp.com'}
 
   #ActionMailer Config
   #Setup for production --deliveries, no errors raised

@@ -1,11 +1,11 @@
-<div id="options">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-<div id="optionsContent">
+<div id="wrapper">
+  <div id="register" class="animate form">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <h1>Edit <%= resource_name.to_s.humanize %></h1>
   <%= devise_error_messages! %>
 
-  <div><%= f.lebel :name %><br />
-  <%= f.text_field :name %></div>
+  <p><%= f.label :name, class="uname" %><br />
+  <%= f.text_field :name, :placeholder=>"Your name please.." %></p>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>

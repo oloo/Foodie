@@ -12,7 +12,7 @@
  *= require base
  *= require layout
  *= require skeleton
- *= require_tree .
+ *= require_directory .
 */
 
 /*!
@@ -5642,20 +5642,45 @@ section {
   }
 }
 
-/* Options Window*/
-#options {
-		position: absolute;
-		left: 0;
-		top: 0;
-		margin: 10px;
-		padding: 20px;
-		width: 400px;
-		background-color: rgba( 0, 0, 0, .4 );
-		border-radius: 5px;
-	}
-	
-	#optionsContent{
-		margin-top: 20px;
-		-webkit-transition: all 1s ease-out;
-		-o-transition: all 1s ease-out;
-	}
+/*-- Login Details */
+#wrapper h2{
+  font-size: 30px;
+  color: #007cc5;
+}
+
+#login_box,
+#register_box {
+  position: relative;
+  width: 250px;
+  padding:25px 30px;
+  border: 3px solid #83bbdf;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#login_box,
+#register_box h2{
+  margin-bottom: 20px;
+}
+
+.input_block {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input_block label {
+  font-weight: bold;
+  color: #666;
+}
+
+.input_block label a{
+  font-weight: normal;
+}
+
+.login_form input.text {
+  width: 408px;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+

@@ -1,24 +1,26 @@
-<div id="options">
-<h2>Sign up</h2>
-<div id="optionsContent">
+<div id="wrapper">
+
+<div id="register_box" class="login_form">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <h2>Sign up</h2>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name %></div>
+  <div class="input_block"><%= f.label :name %><br />
+  <%= f.text_field :name, :placeholder=>"Your name please.." %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <p><%= f.label :email %><br />
+  <%= f.email_field :email, :size=>"40", :placeholder=>"Email Address..." %></p>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password, :placeholder=>"eg. Secretpassword" %></p>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, :placeholder=>"Repeat Password" %></p>
 
-  <div><%= f.submit "Sign up" %></div>
+  <p class="signin button"><%= f.submit "Sign up" %></p>
+  <p class="change_link">Not a member yet?
+<%= render "devise/shared/links" %></p>
 <% end %>
 
-<%= render "devise/shared/links" %>
 </div>
 </div>
