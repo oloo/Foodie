@@ -17,7 +17,7 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation, :placeholder=>"Repeat Password" %></p>
 
-  <p class="signin button"><%= f.submit "Sign up" %></p>
+  <p class="signin button"><%= f.submit "Sign up", :class =>'btn btn-green' %></p>
   <p class="change_link">Not a member yet?
 <%= render "devise/shared/links" %></p>
 <% end %>

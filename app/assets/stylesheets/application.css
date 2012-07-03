@@ -24,6 +24,50 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+ #wrapper h2{
+  font-size: 30px;
+  color: #007cc5;
+}
+
+#login_box,
+#register_box {
+  position: relative;
+  width: 250px;
+  padding:25px 30px;
+  border: 3px solid #83bbdf;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+#login_box,
+#register_box h2{
+  margin-bottom: 20px;
+}
+
+.input_block {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input_block label {
+  font-weight: bold;
+  color: #666;
+}
+
+.input_block label a{
+  font-weight: normal;
+}
+
+.span6 p {
+      padding-right: 20px;
+      font-size: 15px;
+      color: #555; 
+}
+.span4 p {
+	font-size: 14px;
+	color: #555;
+}
+/*What to DO */
 article,
 aside,
 details,
@@ -2880,12 +2924,11 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 8px 20px 12px;
   margin-left: -20px;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 200;
   line-height: 1;
-  color: #ffffff;
+  color: #56AD14;
 }
-
 .navbar .navbar-text {
   margin-bottom: 0;
   line-height: 40px;
@@ -3973,7 +4016,7 @@ a.thumbnail:hover {
 .hero-unit {
   padding: 60px;
   margin-bottom: 30px;
-  background-color: #eeeeee;
+  background: url('yum.jpg');
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -4258,7 +4301,7 @@ footer {
     height: 324px;
     padding: 95px 620px 0 0;
     margin-right: -80px;
-    background: url('foodie1.jpg') right bottom no-repeat; }
+    background: url('/static/img/home-hero.png?c569c91fe720') right bottom no-repeat; }
     .home .hero-unit h1 {
       font-size: 38px;
       margin-top: 0.2em;
@@ -4291,19 +4334,19 @@ section {
   section.features .span6 {
     margin-bottom: 40px; }
     section.features .span6 > p, section.features .span6 > h3 {
-      margin-left: 98px;
+      margin-left: 28px;
       margin-right: 10px; }
     section.features .span6 p {
-      padding-right: 30px;
+      padding-right: 20px;
       font-size: 15px;
       color: #555; }
-    section.features .span6 i {
+    /* section.features .span6 i {
       float: left;
-      height: 70px;
-      width: 70px;
-      background-position: 11px -106px;
+      height: 50px;
+      width: 50px;
+      background-position: 11px -86px;
       background-color: #EEE;
-      border-radius: 80px;
+      border-radius: 60px;
       margin: 0 10px 10px 10px;
       background: url('/static/img/home-features2.png?124f2b26eced') no-repeat #f9f8f0; }
       section.features .span6 i.bookmarking {
@@ -4313,76 +4356,7 @@ section {
       section.features .span6 i.collaborate {
         background-position: 12px -53px; }
       section.features .span6 i.search {
-        background-position: 14px -194px; }
-  section.screenshots {
-    text-align: center; }
-    section.screenshots > div {
-      position: relative;
-      margin-top: 20px;
-      height: 470px; }
-      section.screenshots > div h4 {
-        font-size: 18px;
-        font-weight: normal;
-        margin-bottom: 30px; }
-    section.screenshots .shadow {
-      height: 10px;
-      width: 100%;
-      position: absolute;
-      bottom: -3px;
-      left: 10px;
-      background: url('/static/img/home-divider.png?c569c91fe720') center bottom no-repeat; }
-    section.screenshots .tabs {
-      list-style: none;
-      border: 1px solid #ccc;
-      margin: 40px auto;
-      display: inline-block;
-      text-align: center;
-      font-size: 15px;
-      overflow: hidden;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      -ms-border-radius: 6px;
-      -o-border-radius: 6px;
-      border-radius: 6px; }
-      section.screenshots .tabs li {
-        width: 120px;
-        border-right: 1px solid #ddd;
-        margin: 0 0 0 0;
-        padding: 0;
-        float: left; }
-        section.screenshots .tabs li a {
-          display: block;
-          padding: 0.8em 0; }
-        section.screenshots .tabs li a:hover {
-          text-decoration: none; }
-        section.screenshots .tabs li:first-child {
-          -moz-border-radius-topleft: 6px;
-          -webkit-border-top-left-radius: 6px;
-          -ms-border-top-left-radius: 6px;
-          -o-border-top-left-radius: 6px;
-          border-top-left-radius: 6px;
-          -moz-border-radius-bottomleft: 6px;
-          -webkit-border-bottom-left-radius: 6px;
-          -ms-border-bottom-left-radius: 6px;
-          -o-border-bottom-left-radius: 6px;
-          border-bottom-left-radius: 6px; }
-        section.screenshots .tabs li:last-child {
-          border-right: none;
-          -moz-border-radius-topright: 6px;
-          -webkit-border-top-right-radius: 6px;
-          -ms-border-top-right-radius: 6px;
-          -o-border-top-right-radius: 6px;
-          border-top-right-radius: 6px;
-          -moz-border-radius-bottomright: 6px;
-          -webkit-border-bottom-right-radius: 6px;
-          -ms-border-bottom-right-radius: 6px;
-          -o-border-bottom-right-radius: 6px;
-          border-bottom-right-radius: 6px; }
-        section.screenshots .tabs li a.selected {
-          background: url('/static/img/base-noise.jpg?c569c91fe720') #f0f0f0;
-          border-color: #ccc;
-          box-shadow: inset 0 1px 2px #ccc;
-          color: #000; }
+        background-position: 14px -194px; } */
   section.beawesome {
     text-align: center;
     padding: 60px 0; }
@@ -5641,46 +5615,3 @@ section {
     margin-left: 30px;
   }
 }
-
-/*-- Login Details */
-#wrapper h2{
-  font-size: 30px;
-  color: #007cc5;
-}
-
-#login_box,
-#register_box {
-  position: relative;
-  width: 250px;
-  padding:25px 30px;
-  border: 3px solid #83bbdf;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-}
-
-#login_box,
-#register_box h2{
-  margin-bottom: 20px;
-}
-
-.input_block {
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.input_block label {
-  font-weight: bold;
-  color: #666;
-}
-
-.input_block label a{
-  font-weight: normal;
-}
-
-.login_form input.text {
-  width: 408px;
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-
