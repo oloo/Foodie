@@ -28,6 +28,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'fbgraph'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :test, :development do
 	gem 'rspec-rails'
