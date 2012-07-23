@@ -6,16 +6,30 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield(:head) %>
+  <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online and Mobile Food Ordering Service in Kampala">
+    <meta name="author" content="Ray Besiga">
 </head>
 <body>
-       <%= render 'layouts/navigation' %>
-<br /><br />
-       <div class="clearfix"></div>
-<article class="container">
-	<% flash.each do |name, msg| %>
-	<%= content_tag :div, msg, id: "flash_#{name}" %>
-	<% end %>
-<%= yield %>
-</article>
+      <%= render 'layouts/navigation' %>
+      <div class="container">
+	       <% flash.each do |name, msg| %>
+	       <%= content_tag :div, msg, id: "flash_#{name}" %>
+	       <% end %>
+
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      </div>
+      <script type="text/javascript">
+    $(function(){
+    $('.dropdown-toggle').dropdown();
+    });
+    </script>
 </body>
 </html>

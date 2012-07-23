@@ -1,80 +1,153 @@
-<header class="hero-unit">
-        <h1>The best way to order food, and have it delivered</h1>
-        <p class="intro">
-            Foodie makes it easy to search and order food, here in Kampala,on the web.
-        </p>
-        <p><%= link_to "Sign up, it's easy!", new_user_registration_path, :class => 'btn btn-green' %></p>
-</header>
+<div class="row">    
+   
+    <div id="restaurant_search" class="span5">
 
-<section class="row features">
-            <h2>Ordering food should be simple. And that's why we are here</h2>
-            <p class="intro">Order food. Make reservations. Recommend restaurants.</p>
-  
-            <div class="span6">
-              <h3>Choice</h3>
-               <p>
-               Don't be limited. Pick your favourite restaurants and cuisines from our wide variety of eating places.
-                </p>
+      <h1 style="text-align:centre;">Find Your Favourite Restaurants</h1>
+      <form class="form-horizontal">
+        <br />
+        <fieldset>
+          <legend>Find that food!</legend><br/>
+        <div class="control-group">
+            <label class="control-label" for="input01">Food Name</label>
+            <div class="controls">
+              <input type="text" class="span3 search-query" id="input01">
+              <p class="help-block">Enter the desired culinary delight.</p>
             </div>
+          </div>
+            <div class="control-group">
+            <label class="control-label" for="select01">Cuisine Type</label>
+            <div class="controls">
+              <select id="select01">
+                <option>Ugandan</option>
+                <option>Italian</option>
+                <option>Indian</option>
+                <option>Sushi</option>
+                <option>Thai</option>
+                <option>Chinese</option>
+                <option>Ethiopian</option>
+                <option>Fast Food</option>
+                <option>Chinese</option>
+              </select>
+            </div>
+          </div>
+            <div class="control-group">
+            <label class="control-label" for="inlineCheckboxes">Delivery Options</label>
+            <div class="controls">
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> Delivery
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Pickup
+              </label>
 
-            <div class="span6">
-              <h3>Convenience</h3>
-              <p>All the menus are online and are constantly updated with the latest offers. Compare prices to find the best solutions to your culinary needs.</p>
             </div>
-            
-            <div class="span6">
-              <i class="collaborate"></i>
-              <h3>Service</h3>
-              <p>Orders are processed fast and efficiently, keeping you updated abouty our order status.</p>
-            </div>
-
-            <div class="span6">
-              <i class="read"></i>    
-              <h3>Speed. Comfort. Reliability</h3>
-              <p>Have your meal at your door within the hour. Or its free!</p>
-            </div>
-        
-       <!--  <div class="follow-buttons">
-            <div style="vertical-align:bottom; margin:0 20px 0 80px"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://kippt.com" data-text="Manage your bookmarks with friends and co-workers" data-via="kippt" data-related="kippt">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-            
-            <div style="vertical-align:middle"><div class="fb-like" data-href="http://facebook.com/kipptapp" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div></div>
-            
-            <div style="vertical-align:bottom;">
-                <g:plusone size="medium" annotation="inline" width="120" href="https://kippt.com"></g:plusone>
-            </div>
-            
-        </div> -->
-      </section>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large  query">Find Restaurants</button>
+          </div>
+          </fieldset>  
+</form>
+    </div>
+    <div class="span7">
+    <div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      <%= image_tag '1.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>American Pancakes</h4>
+        <p>Yum!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag '2.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Yummy!</h4>
+        <p>Look at that!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag '3.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Belissimo</h4>
+        <p>Look at that!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag '4.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Delicious!</h4>
+        <p>Look at that!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag '5.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Chomp Chomp!</h4>
+        <p>Look at that!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag '6.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Delight!</h4>
+        <p>Look at that!</p>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag 'matooke.jpg', :style=>"width:670px;" %>
+      <div class="carousel-caption">
+        <h4>Rice and Matooke!</h4>
+        <p>Jangu Tulye!</p>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+  </div>
+</div>
+<hr>
+<div class="row">
+        <div class="span4">
+          <h2>Choice</h2>
+           <p>Food variety should be a priority. Don't be limited. Pick your favourite restaurants and cuisines from our wide selection of eating places.</p>
+        </div>
+        <div class="span4">
+          <h2>Convenience</h2>
+           <p>Why run around for food? All the menus are online and are constantly updated with the latest offers. Compare prices to find fulfilling solutions to your culinary needs. </p>
+       </div>
+        <div class="span4">
+          <h2>Service</h2>
+          <p>Orders are processed fast and efficiently, keeping you updated about your order status. Have your meal at your door within the hour. Or its free!</p>
+        </div>
+      </div>
 
       <hr>
-      <section class="row">
-       <div style="float:left;"><%= image_tag 'chef.png' %></div> 
-         <h2>I own a restaurant. Why should I join Foodie?</h2>
-            <p class="intro">Using Foodie as your online and mobile ordering partner enables you to focus on what you do best: cooking great food!</p>
-
-        <div class="span5">
-         <h3>Increased Orders</h3>
-		<p>The online and mobile ordering platform improves access to markets by 15-25% a year.</p>
-		</div>
-
-		<div class="span5">
-		<h3>Greater Marketing</h3>
-		<p>Foodie spends a significant sum on marketing to make sure that when consumers want food, they log on to Foodie. We advertise online, on mobile, radio, and TV to make sure your consumers know that they can find great restaurants like yours online.</p>
-		</div>
-		
-		<div class="span5">
-		<h3>Your business, online</h3>
-		<p>By using Foodie as your online ordering partner, restaurants avoid the massive set-up costs and hassle of building a transactional website.</p>
-		</div>
-
-    <p style="text-align:center;text-decoration:none;"><%= link_to "Sign up your restaurant!", new_user_registration_path, :class => 'btn btn-green btn-large' %></p>
-
-      </section>
-
-      <hr>
-
-       <section class="row beawesome">
-          <h2>Order Food the easy way. Use Foodie.</h2><br />
-          <p style="text-align:center;"><%= link_to "Sign up, it's easy!", new_user_registration_path, :class => 'btn btn-green btn-large' %></p>
-      <section>
+      <div class="row">
+    <div class="span8">
+      <h1 class="lead">
+        <b>Foodie</b> The easiest way to order food in Kampala.
+        <!-- AddThis Button BEGIN -->
+        <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>
+          <a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
+          <a class="addthis_button_pinterest_pinit"></a>
+          <a class="addthis_counter addthis_pill_style"></a>
+        </div>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ffed9197337352a"></script>
+<!-- AddThis Button END -->
+      </h1>
+    </div>
+    <div class="span4">
+      <h3 class="ac">Order Food<small> the easy way!</small></h3>
+      <p class="ac">
+        <%= link_to "Sign up for Free!", new_user_registration_path, :class => 'btn btn-large btn-primary' %>
+      </p>
+    </div>
+  </div>
+  <hr>
+      

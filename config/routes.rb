@@ -1,10 +1,6 @@
 Foodie::Application.routes.draw do
   ActiveAdmin.routes(self)
 
-  match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
-  match 'signout', to: 'sessions#destroy', as: 'signout'
-
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   authenticated :user do
@@ -17,6 +13,7 @@ Foodie::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  match '/restaurants' => 'home#restaurant'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
