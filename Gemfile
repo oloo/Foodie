@@ -31,6 +31,7 @@ gem 'jquery-rails'
 gem 'fbgraph'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'oauth2'
 
 group :test, :development do
 	gem 'rspec-rails'
