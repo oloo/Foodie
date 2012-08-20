@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   database: foodie
   pool: 5
-  username: postgres
+  username: raybesiga
   password: Kurosaki1?!
 
 # Warning: The database defined as "test" will be erased and
@@ -20,7 +20,7 @@ test: &test
   timeout: 5000
 
 production:
-  adapter: postgres
+  adapter: postgresql
   database: foodie
   pool: 5
 cucumber:
