@@ -1,11 +1,13 @@
-<div id="wrapper">
-<div id="login_box" class="login_form">
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<div class="row">    
+   
+<div class="span6">
 <h2>Log in</h2>
-  <p><%= f.label :email, :class => "uname" %><br />
+<%= form_for(resource, :as => resource_name, :html => { :class => "form-horizontal"}, :url => session_path(resource_name)) do |f| %>
+
+  <p><%= f.label :email %>
   <%= f.email_field :email, :placeholder=>"Email Address..." %></p>
 
-  <p><%= f.label :password %><br />
+  <p><%= f.label :password %>
   <%= f.password_field :password, :placeholder=>"Password.." %></p>
 
   <% if devise_mapping.rememberable? -%>
@@ -16,5 +18,11 @@
 <% end %>
 <p class="change_link">Not a member yet?
 <%= render "devise/shared/links" %></p>
+</div>
+
+<div class="span6">
+	<h2>Or use your other networks</h2>
+	<br/>
+<%= link_to( image_tag('flogin.png'), user_omniauth_authorize_path(:facebook) )%>
 </div>
 </div>
