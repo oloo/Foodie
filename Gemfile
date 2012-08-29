@@ -32,6 +32,7 @@ gem 'fbgraph'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
+gem 'mail'
 
 group :test, :development do
 	gem 'rspec-rails'
