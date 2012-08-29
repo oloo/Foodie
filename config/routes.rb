@@ -1,8 +1,13 @@
 Foodie::Application.routes.draw do
+  resources :sessions, :controller => 'sessions'
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/')
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   authenticated :user do
     root :to => 'home#index'
